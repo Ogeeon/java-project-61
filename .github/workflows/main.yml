@@ -7,6 +7,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./app
 
     steps:
       - uses: actions/checkout@v4
@@ -17,8 +20,8 @@ jobs:
       - uses: gradle/gradle-build-action@v3
         with:
           gradle-version: 8.7
-      - run: ./app/gradlew checkstyleMain
-      - run: ./app/gradlew test
+      - run: ./gradlew checkstyleMain
+      - run: ./gradlew test
       - name: Publish code coverage
         uses: paambaati/codeclimate-action@v9.0.0
         env:
