@@ -1,5 +1,7 @@
 plugins {
     application
+    jacoco
+    checkstyle
     id("java")
     id("com.github.ben-manes.versions") version "0.50.0"
 }
@@ -26,4 +28,10 @@ tasks.test {
 
 tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
+}
+
+tasks.jacocoTestReport {
+    reports {
+        xml.required.set(true)
+    }
 }
