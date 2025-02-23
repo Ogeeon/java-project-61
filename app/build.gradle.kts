@@ -1,5 +1,5 @@
 plugins {
-//    id("application")
+    application
     id("java")
     id("com.github.ben-manes.versions") version "0.50.0"
 }
@@ -7,7 +7,9 @@ plugins {
 group = "hexlet.code"
 version = "1.0-SNAPSHOT"
 
-//application { mainClass.set("hexlet.code.App") }
+application {
+    mainClass = "hexlet.code.App"
+}
 
 repositories {
     mavenCentral()
