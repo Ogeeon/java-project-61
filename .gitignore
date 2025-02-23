@@ -3,3 +3,4 @@ app/gradle
 app/.idea
 app/gradlew
 app/gradlew.bat
+app/build
