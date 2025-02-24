@@ -10,6 +10,7 @@ public class Engine {
         String answer;
         for (int i = 0; i < 3; i++) {
             System.out.println(questions[i]);
+            System.out.print("Your answer: ");
             answer = sc.nextLine();
             if (answer.equals(answers[i])) {
                 System.out.println("Correct!");
