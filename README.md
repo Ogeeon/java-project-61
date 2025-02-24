@@ -4,4 +4,5 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/475a956726f25017932c/test_coverage)](https://codeclimate.com/github/Ogeeon/java-project-61/test_coverage)
 
 'Even' game [recording](https://asciinema.org/a/IVOceEKZ06A868Q1JhHG8vzA2)\
-'Calc' game [recording](https://asciinema.org/a/pZNGSPD9gsYJGWIeUAOVSqUzW)
+'Calc' game [recording](https://asciinema.org/a/pZNGSPD9gsYJGWIeUAOVSqUzW)\
+'GCD' game [recording](https://asciinema.org/a/g0aAV7T75JS82i7vdPI6t7A2a)
