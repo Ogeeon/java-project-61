@@ -4,13 +4,12 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class CalcGame {
-    private static final int MAX_ROUNDS = 3;
     private static final int MAX_NUMBER = 100;
 
     public static void startGame() {
         String instructions = "What is the result of the expression?";
-        String[] questions = new String[MAX_ROUNDS];
-        String[] answers = new String[MAX_ROUNDS];
+        String[] questions = new String[Engine.MAX_ROUNDS];
+        String[] answers = new String[Engine.MAX_ROUNDS];
         int a;
         int b;
         int result;

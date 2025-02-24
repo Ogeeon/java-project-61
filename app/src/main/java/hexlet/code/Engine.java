@@ -3,7 +3,8 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    private static final int MAX_ROUNDS = 3;
+    public static final int MAX_ROUNDS = 3;
+
     public static void playGame(String instructions, String[] questions, String[] answers) {
         String playerName = Cli.greetUser();
         System.out.println(instructions);
