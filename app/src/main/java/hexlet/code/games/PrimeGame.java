@@ -2,15 +2,20 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
+import java.util.Random;
+
 public class PrimeGame {
+    private static final int MAX_ROUNDS = 3;
+    private static final int MAX_NUMBER = 100;
     public static void startGame() {
         String instructions = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String[] questions = new String[3];
-        String[] answers = new String[3];
+        String[] questions = new String[MAX_ROUNDS];
+        String[] answers = new String[MAX_ROUNDS];
         int num;
+        Random r = new Random();
 
-        for (int i = 0; i < 3; i++) {
-            num = (int) (100 * Math.random() + 1);
+        for (int i = 0; i < MAX_ROUNDS; i++) {
+            num = r.nextInt(MAX_NUMBER) ;
             questions[i] = String.format("Question: %d", num);
             answers[i] = isPrime(num) ? "yes" : "no";
         }

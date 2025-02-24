@@ -3,12 +3,13 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
+    private static final int MAX_ROUNDS = 3;
     public static void playGame(String instructions, String[] questions, String[] answers) {
         String playerName = Cli.greetUser();
         System.out.println(instructions);
         Scanner sc = new Scanner(System.in);
         String answer;
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < MAX_ROUNDS; i++) {
             System.out.println(questions[i]);
             System.out.print("Your answer: ");
             answer = sc.nextLine();
