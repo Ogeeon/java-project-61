@@ -20,7 +20,7 @@ public class CalcGame {
             a = r.nextInt(MAX_NUMBER);
             b = r.nextInt(MAX_NUMBER);
             isSum = r.nextBoolean();
-            questions[i] = String.format("Question: %d %s %d", a, (isSum ? " + " : " - "), b);
+            questions[i] = String.format("Question: %d %s %d", a, (isSum ? "+" : "-"), b);
             result = a + (isSum ? 1 : -1) * b;
             answers[i] = String.valueOf(result);
         }
