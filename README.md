@@ -6,4 +6,5 @@
 'Even' game [recording](https://asciinema.org/a/IVOceEKZ06A868Q1JhHG8vzA2)\
 'Calc' game [recording](https://asciinema.org/a/pZNGSPD9gsYJGWIeUAOVSqUzW)\
 'GCD' game [recording](https://asciinema.org/a/g0aAV7T75JS82i7vdPI6t7A2a)\
-'Progression' game [recording](https://asciinema.org/a/qBIRvUs1zXM4GhMxPIwA5dsnq)
+'Progression' game [recording](https://asciinema.org/a/qBIRvUs1zXM4GhMxPIwA5dsnq)\
+'Prime' game [recording](https://asciinema.org/a/T9EbIcidr7X1t9RP2n2JOWn73)

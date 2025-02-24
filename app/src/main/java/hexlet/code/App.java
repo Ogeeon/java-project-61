@@ -4,6 +4,7 @@ import hexlet.code.games.EvenGame;
 import hexlet.code.games.CalcGame;
 import hexlet.code.games.GCDGame;
 import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.PrimeGame;
 
 import java.util.Scanner;
 
@@ -14,6 +15,7 @@ public class App {
     private static final int CHOICE_CALC = 3;
     private static final int CHOICE_GCD = 4;
     private static final int CHOICE_PROGRESSION = 5;
+    private static final int CHOICE_PRIME = 6;
 
     public static void main(String[] args) {
         String greeting = "Please enter the game number and press Enter.\n"
@@ -22,6 +24,7 @@ public class App {
                 + CHOICE_CALC + " - Calc\n"
                 + CHOICE_GCD + " - GCD\n"
                 + CHOICE_PROGRESSION + " - Progression\n"
+                + CHOICE_PRIME + " - Prime\n"
                 + CHOICE_EXIT + " - Exit\n"
                 + "Your choice: ";
         int choice;
@@ -35,6 +38,7 @@ public class App {
                 case CHOICE_CALC: CalcGame.startGame(); return;
                 case CHOICE_GCD: GCDGame.startGame(); return;
                 case CHOICE_PROGRESSION: ProgressionGame.startGame(); return;
+                case CHOICE_PRIME: PrimeGame.startGame(); return;
                 default:
             }
         }
