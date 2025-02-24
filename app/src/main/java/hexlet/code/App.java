@@ -1,5 +1,7 @@
 package hexlet.code;
 
+import hexlet.code.games.EvenGame;
+
 import java.util.Scanner;
 
 public class App {
@@ -20,13 +22,12 @@ public class App {
             switch (choice) {
                 case CHOICE_EXIT -> System.exit(0);
                 case CHOICE_GREET -> Cli.greetUser();
-                case CHOICE_EVEN -> EvenGame.run();
+                case CHOICE_EVEN -> EvenGame.startGame();
                 default -> {
                     System.out.println(greeting);
                 }
             }
         }
-
     }
 
     private static int getChoice() {
