@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class CalcGame implements Game {
+public class CalcGame {
     public static void startGame() {
         String instructions = "What is the result of the expression?";
         String[] questions = new String[3];

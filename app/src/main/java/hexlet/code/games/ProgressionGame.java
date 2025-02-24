@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class ProgressionGame implements Game {
+public class ProgressionGame {
     private static final int PROGRESSION_LENGTH = 10;
 
     public static void startGame() {

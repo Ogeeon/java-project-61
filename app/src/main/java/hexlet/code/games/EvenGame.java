@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class EvenGame implements Game {
+public class EvenGame {
     public static void startGame() {
         String instructions = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         String[] questions = new String[3];
