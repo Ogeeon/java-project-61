@@ -15,7 +15,7 @@ public class PrimeGame {
         Random r = new Random();
 
         for (int i = 0; i < MAX_ROUNDS; i++) {
-            num = r.nextInt(MAX_NUMBER) ;
+            num = r.nextInt(MAX_NUMBER);
             questions[i] = String.format("Question: %d", num);
             answers[i] = isPrime(num) ? "yes" : "no";
         }
