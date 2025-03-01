@@ -13,14 +13,14 @@ make run-dist
 ```
 to build and run the application.
 ### Game modes
-After running the application, the user gets to choose a game mode. Every game is played until the user gives three correct answers in a row or gives an incorrect answer.
-- Even
+After running the application, the user gets to choose a game mode. Each game ends when the user gives three correct answers in a row or gives an incorrect answer.
+- Even\
 The user needs to answer if a given number is off or even. [Here](https://asciinema.org/a/IVOceEKZ06A868Q1JhHG8vzA2) is the asciinema with gameplay. 
-- Calc
+- Calc\
 The user is to guess the result of a simple expression. [Here](https://asciinema.org/a/pZNGSPD9gsYJGWIeUAOVSqUzW) is the asciinema with gameplay. 
-- GCD
+- GCD\
 The user is to calculate the greatest common divisor of two numbers. [Here](https://asciinema.org/a/g0aAV7T75JS82i7vdPI6t7A2a) is the asciinema with gameplay.
-- Progression
+- Progression\
 The user needs to guess a hidden number in an arithmetic progression. [Here](https://asciinema.org/a/qBIRvUs1zXM4GhMxPIwA5dsnq) is the asciinema with gameplay.
-- Prime
+- Prime\
 The user needs to answer if a given number is prime or not. [Herer](https://asciinema.org/a/T9EbIcidr7X1t9RP2n2JOWn73) is the asciinema with gameplay.
