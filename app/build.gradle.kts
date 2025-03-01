@@ -2,7 +2,6 @@ plugins {
     application
     jacoco
     checkstyle
-    id("java")
     id("com.github.ben-manes.versions") version "0.50.0"
 }
 
@@ -15,15 +14,6 @@ application {
 
 repositories {
     mavenCentral()
-}
-
-dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-}
-
-tasks.test {
-    useJUnitPlatform()
 }
 
 tasks.getByName("run", JavaExec::class) {
