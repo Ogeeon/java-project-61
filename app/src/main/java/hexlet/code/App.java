@@ -28,27 +28,30 @@ public class App {
                 + CHOICE_EXIT + " - Exit\n"
                 + "Your choice: ";
         int choice;
-        while (true) {
+        boolean done = false;
+        Scanner sc = new Scanner(System.in);
+        while (!done) {
             System.out.println(greeting);
-            choice = getChoice();
+            choice = getChoice(sc);
             switch (choice) {
-                case CHOICE_EXIT: return;
-                case CHOICE_GREET: Cli.greetUser(); return;
-                case CHOICE_EVEN: EvenGame.startGame(); return;
-                case CHOICE_CALC: CalcGame.startGame(); return;
-                case CHOICE_GCD: GCDGame.startGame(); return;
-                case CHOICE_PROGRESSION: ProgressionGame.startGame(); return;
-                case CHOICE_PRIME: PrimeGame.startGame(); return;
+                case CHOICE_EXIT: done = true; break;
+                case CHOICE_GREET: Cli.greetUser(); done = true; break;
+                case CHOICE_EVEN: EvenGame.startGame(); done = true; break;
+                case CHOICE_CALC: CalcGame.startGame(); done = true; break;
+                case CHOICE_GCD: GCDGame.startGame(); done = true; break;
+                case CHOICE_PROGRESSION: ProgressionGame.startGame(); done = true; break;
+                case CHOICE_PRIME: PrimeGame.startGame(); done = true; break;
                 default:
             }
         }
+        sc.close();
     }
 
-    private static int getChoice() {
-        Scanner sc = new Scanner(System.in);
-        try {
+    private static int getChoice(Scanner sc) {
+        if (sc.hasNextInt()) {
             return sc.nextInt();
-        } catch (Exception e) {
+        } else {
+            sc.next();
             return -1;
         }
     }
