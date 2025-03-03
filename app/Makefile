@@ -30,7 +30,4 @@ lint:
 check-deps:
 	./gradlew dependencyUpdates -Drevision=release
 
-
 build-run: build run
-
-.PHONY: build
