@@ -28,21 +28,18 @@ public class App {
                 + CHOICE_EXIT + " - Exit\n"
                 + "Your choice: ";
         int choice;
-        boolean done = false;
         Scanner sc = new Scanner(System.in);
-        while (!done) {
-            System.out.println(greeting);
-            choice = getChoice(sc);
-            switch (choice) {
-                case CHOICE_EXIT: done = true; break;
-                case CHOICE_GREET: Cli.greetUser(); done = true; break;
-                case CHOICE_EVEN: EvenGame.startGame(); done = true; break;
-                case CHOICE_CALC: CalcGame.startGame(); done = true; break;
-                case CHOICE_GCD: GCDGame.startGame(); done = true; break;
-                case CHOICE_PROGRESSION: ProgressionGame.startGame(); done = true; break;
-                case CHOICE_PRIME: PrimeGame.startGame(); done = true; break;
-                default:
-            }
+        System.out.println(greeting);
+        choice = getChoice(sc);
+        switch (choice) {
+            case CHOICE_EXIT: break;
+            case CHOICE_GREET: Cli.greetUser(); break;
+            case CHOICE_EVEN: EvenGame.startGame(); break;
+            case CHOICE_CALC: CalcGame.startGame(); break;
+            case CHOICE_GCD: GCDGame.startGame(); break;
+            case CHOICE_PROGRESSION: ProgressionGame.startGame(); break;
+            case CHOICE_PRIME: PrimeGame.startGame(); break;
+            default: throw new RuntimeException("Unknown user choice: " + choice);
         }
         sc.close();
     }
