@@ -6,7 +6,7 @@ public class Engine {
     public static final int MAX_ROUNDS = 3;
 
     public static void playGame(String instructions, String[] questions, String[] answers) {
-        String playerName = Cli.greetUser();
+        String playerName = greet();
         System.out.println(instructions);
         Scanner sc = new Scanner(System.in);
         String answer;
@@ -23,5 +23,14 @@ public class Engine {
             }
         }
         System.out.printf("Congratulations, %s!\n", playerName);
+    }
+
+    private static String greet() {
+        System.out.println("Welcome to the Brain Games!");
+        Scanner sc = new Scanner(System.in);
+        System.out.print("May I have your name? ");
+        String playerName = sc.nextLine();
+        System.out.println("Hello, " + playerName + "!");
+        return playerName;
     }
 }
