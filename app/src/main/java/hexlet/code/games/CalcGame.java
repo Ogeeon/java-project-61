@@ -19,7 +19,7 @@ public class CalcGame {
             a = r.nextInt(MAX_NUMBER);
             b = r.nextInt(MAX_NUMBER);
             isSum = r.nextBoolean();
-            result = a + (isSum ? 1 : -1) * b;
+            result = calcExpressionResult(a, b, isSum);
             String[] roundData = new String[2];
             roundData[0] = String.format("Question: %d %s %d", a, (isSum ? "+" : "-"), b);
             roundData[1] = String.valueOf(result);
@@ -27,5 +27,9 @@ public class CalcGame {
         }
 
         Engine.playGame(instructions, gameData);
+    }
+
+    private static int calcExpressionResult(int a, int b, boolean isSum) {
+        return a + (isSum ? 1 : -1) * b;
     }
 }
