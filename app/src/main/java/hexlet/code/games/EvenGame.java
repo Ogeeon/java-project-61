@@ -8,17 +8,18 @@ public class EvenGame {
 
     public static void startGame() {
         String instructions = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        String[] questions = new String[Engine.MAX_ROUNDS];
-        String[] answers = new String[Engine.MAX_ROUNDS];
+        String[][] gameData = new String[Engine.MAX_ROUNDS][2];
         int number;
         Random r = new Random();
 
         for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
             number = r.nextInt(MAX_NUMBER);
-            questions[i] = "Question: " + number;
-            answers[i] = (number % 2 == 0) ? "yes" : "no";
+            String[] roundData = new String[2];
+            roundData[0] = "Question: " + number;
+            roundData[1] = (number % 2 == 0) ? "yes" : "no";
+            gameData[i] = roundData;
         }
 
-        Engine.playGame(instructions, questions, answers);
+        Engine.playGame(instructions, gameData);
     }
 }

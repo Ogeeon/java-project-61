@@ -10,8 +10,7 @@ public class ProgressionGame {
 
     public static void startGame() {
         String instructions = "What number is missing in the progression?";
-        String[] questions = new String[Engine.MAX_ROUNDS];
-        String[] answers = new String[Engine.MAX_ROUNDS];
+        String[][] gameData = new String[Engine.MAX_ROUNDS][2];
         int first;
         int increment;
         int next;
@@ -24,19 +23,21 @@ public class ProgressionGame {
             increment = r.nextInt(MAX_INCREMENT) + 1;
             hiddenNumPos = r.nextInt(PROGRESSION_LENGTH);
             sb  = new StringBuilder("Question: ");
+            String[] roundData = new String[2];
             for (int j = 0; j < PROGRESSION_LENGTH; j++) {
                 next = first + increment * j;
                 if (j == hiddenNumPos) {
                     sb.append(".. ");
-                    answers[i] = String.valueOf(next);
+                    roundData[1] = String.valueOf(next);
                 } else {
                     sb.append(next);
                     sb.append(" ");
                 }
             }
-            questions[i] = sb.toString();
+            roundData[0] = sb.toString();
+            gameData[i] = roundData;
         }
 
-        Engine.playGame(instructions, questions, answers);
+        Engine.playGame(instructions, gameData);
     }
 }

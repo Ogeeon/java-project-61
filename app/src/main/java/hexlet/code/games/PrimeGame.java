@@ -8,18 +8,19 @@ public class PrimeGame {
 
     public static void startGame() {
         String instructions = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String[] questions = new String[Engine.MAX_ROUNDS];
-        String[] answers = new String[Engine.MAX_ROUNDS];
+        String[][] gameData = new String[Engine.MAX_ROUNDS][2];
         int num;
         Random r = new Random();
 
         for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
             num = r.nextInt(MAX_NUMBER);
-            questions[i] = String.format("Question: %d", num);
-            answers[i] = isPrime(num) ? "yes" : "no";
+            String[] roundData = new String[2];
+            roundData[0] = String.format("Question: %d", num);
+            roundData[1] = isPrime(num) ? "yes" : "no";
+            gameData[i] = roundData;
         }
 
-        Engine.playGame(instructions, questions, answers);
+        Engine.playGame(instructions, gameData);
     }
 
     private static boolean isPrime(int n) {

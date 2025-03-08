@@ -8,8 +8,7 @@ public class CalcGame {
 
     public static void startGame() {
         String instructions = "What is the result of the expression?";
-        String[] questions = new String[Engine.MAX_ROUNDS];
-        String[] answers = new String[Engine.MAX_ROUNDS];
+        String[][] gameData = new String[Engine.MAX_ROUNDS][2];
         int a;
         int b;
         int result;
@@ -20,11 +19,13 @@ public class CalcGame {
             a = r.nextInt(MAX_NUMBER);
             b = r.nextInt(MAX_NUMBER);
             isSum = r.nextBoolean();
-            questions[i] = String.format("Question: %d %s %d", a, (isSum ? "+" : "-"), b);
             result = a + (isSum ? 1 : -1) * b;
-            answers[i] = String.valueOf(result);
+            String[] roundData = new String[2];
+            roundData[0] = String.format("Question: %d %s %d", a, (isSum ? "+" : "-"), b);
+            roundData[1] = String.valueOf(result);
+            gameData[i] = roundData;
         }
 
-        Engine.playGame(instructions, questions, answers);
+        Engine.playGame(instructions, gameData);
     }
 }

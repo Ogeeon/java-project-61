@@ -1,24 +1,28 @@
 package hexlet.code;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Engine {
     public static final int MAX_ROUNDS = 3;
 
-    public static void playGame(String instructions, String[] questions, String[] answers) {
+    public static void playGame(String instructions, String[][] gameData) {
         String playerName = greet();
         System.out.println(instructions);
         Scanner sc = new Scanner(System.in);
         String answer;
-        for (int i = 0; i < MAX_ROUNDS; i++) {
-            System.out.println(questions[i]);
+        for (String[] round: gameData) {
+            if (round.length < 2) {
+                throw new RuntimeException("Malformed round data: " + Arrays.deepToString(round));
+            }
+            System.out.println(round[0]);
             System.out.print("Your answer: ");
             answer = sc.nextLine();
-            if (answer.equals(answers[i])) {
+            if (answer.equals(round[1])) {
                 System.out.println("Correct!");
             } else {
                 System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.\nLet's try again, %s!\n",
-                        answer, answers[i], playerName);
+                        answer, round[1], playerName);
                 return;
             }
         }
