@@ -18,7 +18,7 @@ public class App {
     private static final int CHOICE_PRIME = 6;
 
     public static void main(String[] args) {
-        String greeting = "Please enter the game number and press Enter.\n"
+        String menu = "Please enter the game number and press Enter.\n"
                 + CHOICE_GREET + " - Greet\n"
                 + CHOICE_EVEN + " - Even\n"
                 + CHOICE_CALC + " - Calc\n"
@@ -29,7 +29,7 @@ public class App {
                 + "Your choice: ";
         int choice;
         Scanner sc = new Scanner(System.in);
-        System.out.println(greeting);
+        System.out.println(menu);
         choice = getChoice(sc);
         switch (choice) {
             case CHOICE_EXIT: break;
