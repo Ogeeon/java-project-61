@@ -20,29 +20,37 @@ public class ProgressionGame {
     }
 
     private static String[] prepareRoundData() {
-        int first;
+        int firstNum;
         int increment;
-        int next;
         int hiddenNumPos;
-        StringBuilder sb;
         Random r = new Random();
 
-        first = r.nextInt(MAX_FIRST_NUMBER);
+        firstNum = r.nextInt(MAX_FIRST_NUMBER);
         increment = r.nextInt(MAX_INCREMENT) + 1;
         hiddenNumPos = r.nextInt(PROGRESSION_LENGTH);
-        sb  = new StringBuilder("Question: ");
+        String[] progressionData = prepareProgression(firstNum, increment, hiddenNumPos).split(";");
         String[] roundData = new String[2];
+        roundData[0] = "Question: " + progressionData[0];
+        roundData[1] = progressionData[1];
+        return roundData;
+    }
+
+    private static String prepareProgression(int firstNum, int increment, int hiddenNumPos) {
+        int next;
+        int correctAnswer = 0;
+        StringBuilder sb = new StringBuilder();
+
         for (int j = 0; j < PROGRESSION_LENGTH; j++) {
-            next = first + increment * j;
+            next = firstNum + increment * j;
             if (j == hiddenNumPos) {
                 sb.append(".. ");
-                roundData[1] = String.valueOf(next);
+                correctAnswer = next;
             } else {
                 sb.append(next);
                 sb.append(" ");
             }
         }
-        roundData[0] = sb.toString();
-        return roundData;
+        sb.append(";").append(correctAnswer);
+        return sb.toString();
     }
 }
