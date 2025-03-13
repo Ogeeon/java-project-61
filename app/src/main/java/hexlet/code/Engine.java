@@ -7,9 +7,12 @@ public class Engine {
     public static final int MAX_ROUNDS = 3;
 
     public static void playGame(String instructions, String[][] gameData) {
-        String playerName = greet();
-        System.out.println(instructions);
+        System.out.println("Welcome to the Brain Games!");
         Scanner sc = new Scanner(System.in);
+        System.out.print("May I have your name? ");
+        String playerName = sc.nextLine();
+        System.out.println("Hello, " + playerName + "!");
+        System.out.println(instructions);
         String answer;
         for (String[] round: gameData) {
             if (round.length < 2) {
@@ -27,14 +30,5 @@ public class Engine {
             }
         }
         System.out.printf("Congratulations, %s!\n", playerName);
-    }
-
-    private static String greet() {
-        System.out.println("Welcome to the Brain Games!");
-        Scanner sc = new Scanner(System.in);
-        System.out.print("May I have your name? ");
-        String playerName = sc.nextLine();
-        System.out.println("Hello, " + playerName + "!");
-        return playerName;
     }
 }
