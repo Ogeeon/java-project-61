@@ -17,7 +17,7 @@ public class GCDGame {
             a = r.nextInt(MAX_NUMBER) + 1;
             b = r.nextInt(MAX_NUMBER) + 1;
             String[] roundData = new String[2];
-            roundData[0] = String.format("Question: %d %d", a, b);
+            roundData[0] = String.format("%d %d", a, b);
             roundData[1] = String.valueOf(gcd(a, b));
             gameData[i] = roundData;
         }

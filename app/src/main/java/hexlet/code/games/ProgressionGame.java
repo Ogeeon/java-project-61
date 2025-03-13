@@ -28,11 +28,7 @@ public class ProgressionGame {
         firstNum = r.nextInt(MAX_FIRST_NUMBER);
         increment = r.nextInt(MAX_INCREMENT) + 1;
         hiddenNumPos = r.nextInt(PROGRESSION_LENGTH);
-        String[] progressionData = prepareProgression(firstNum, increment, hiddenNumPos).split(";");
-        String[] roundData = new String[2];
-        roundData[0] = "Question: " + progressionData[0];
-        roundData[1] = progressionData[1];
-        return roundData;
+        return prepareProgression(firstNum, increment, hiddenNumPos).split(";");
     }
 
     private static String prepareProgression(int firstNum, int increment, int hiddenNumPos) {

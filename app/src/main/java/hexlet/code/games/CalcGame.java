@@ -31,7 +31,7 @@ public class CalcGame {
             operation = operations.get(r.nextInt(operations.size()));
             result = calcExpressionResult(a, b, operation);
             String[] roundData = new String[2];
-            roundData[0] = String.format("Question: %d %s %d", a, getOperationSymbol(operation), b);
+            roundData[0] = String.format("%d %s %d", a, getOperationSymbol(operation), b);
             roundData[1] = String.valueOf(result);
             gameData[i] = roundData;
         }

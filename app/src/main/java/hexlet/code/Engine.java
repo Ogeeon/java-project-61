@@ -15,7 +15,7 @@ public class Engine {
             if (round.length < 2) {
                 throw new RuntimeException("Malformed round data: " + Arrays.deepToString(round));
             }
-            System.out.println(round[0]);
+            System.out.println("Question: " + round[0]);
             System.out.print("Your answer: ");
             answer = sc.nextLine();
             if (answer.equals(round[1])) {

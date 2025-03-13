@@ -15,7 +15,7 @@ public class EvenGame {
         for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
             number = r.nextInt(MAX_NUMBER);
             String[] roundData = new String[2];
-            roundData[0] = "Question: " + number;
+            roundData[0] = String.valueOf(number);
             roundData[1] = (number % 2 == 0) ? "yes" : "no";
             gameData[i] = roundData;
         }

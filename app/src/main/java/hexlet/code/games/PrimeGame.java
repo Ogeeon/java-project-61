@@ -15,7 +15,7 @@ public class PrimeGame {
         for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
             num = r.nextInt(MAX_NUMBER);
             String[] roundData = new String[2];
-            roundData[0] = String.format("Question: %d", num);
+            roundData[0] = String.valueOf(num);
             roundData[1] = isPrime(num) ? "yes" : "no";
             gameData[i] = roundData;
         }
